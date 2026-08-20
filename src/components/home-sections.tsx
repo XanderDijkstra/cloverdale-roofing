@@ -90,7 +90,7 @@ export default function HomeSections() {
           <div className="contractor-service-grid">
             {services.map((service, index) => (
               <Link href={`/services/${service.slug}`} className={`contractor-service-card service-${index + 1}`} key={service.slug}>
-                {index < 2 && <Image src={index === 0 ? "/images/cloverdale-roofer-hero.png" : "/images/cloverdale-roof-hero-no-person.png"} alt="" fill sizes="(max-width: 700px) 100vw, 50vw" />}
+                <Image src={service.image} alt={service.imageAlt} fill sizes="(max-width: 700px) 100vw, 50vw" />
                 <div className="service-card-shade" />
                 <div className="service-card-content"><span>0{index + 1}</span><h3>{service.title}</h3><p>{service.short}</p><strong>View service <ArrowRight size={17} /></strong></div>
               </Link>
