@@ -8,7 +8,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
-      <div className="top-note">Roofing built for wet West Coast seasons</div>
+      <div className="top-note">Serving Cloverdale, Clayton Heights, South Surrey, and nearby Langley</div>
       <div className="nav-wrap">
         <Link href="/" className="brand" aria-label="Cloverdale Roofing Co. home"><span className="brand-mark">CR</span><span>Cloverdale<br />Roofing Co.</span></Link>
         <nav className="desktop-nav" aria-label="Primary navigation"><Link href="/services">Services</Link><Link href="/service-areas">Service area</Link><Link href="/about">Our approach</Link></nav>
