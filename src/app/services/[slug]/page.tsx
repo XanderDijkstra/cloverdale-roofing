@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowRight, Check } from "lucide-react";
+import { services } from "@/lib/site";
+export function generateStaticParams() { return services.map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const service = services.find(item => item.slug === slug); return service ? { title: `${service.title} in Cloverdale, BC`, description: service.short } : {}; }
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const service = services.find(item => item.slug === slug); if (!service) notFound(); return <><section className="page-hero shell"><p className="eyebrow dark">Cloverdale roofing</p><h1>{service.title}</h1><p>{service.intro}</p><Link href="/contact" className="button">Request an inspection <ArrowRight size={18} /></Link></section><section className="detail-grid shell page-content"><div><h2>What the visit can cover</h2><p>The goal is to understand the cause, not just cover the visible symptom. The final recommendation depends on the roof condition and what can be safely verified on site.</p></div><ul className="included-list">{service.includes.map(item => <li key={item}><Check />{item}</li>)}</ul></section><section className="cta-band shell"><div><h2>Not sure this is the right service?</h2><p>Describe what you have noticed. We will start from there.</p></div><Link href="/contact" className="button">Ask about your roof <ArrowRight size={18} /></Link></section></>; }
