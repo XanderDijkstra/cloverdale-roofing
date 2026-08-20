@@ -36,7 +36,7 @@ export default function HomeSections() {
           src="/images/cloverdale-roof-hero-no-person.png"
           alt="Rain-covered shingle roof on a Cloverdale home"
           fill
-          priority
+          loading="eager"
           sizes="100vw"
           className="home-hero-image"
         />
