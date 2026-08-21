@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import SiteHero from "../../_components/site-hero";
 import styles from "../../homepage2.module.css";
 import { locations } from "../../site-data";
+import JsonLd from "@/components/json-ld";
+import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
 import { services } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,10 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const location = locations.find((item) => item.slug === slug);
   if (!location) return {};
-  return {
+  return createPageMetadata({
     title: `Roofing in ${location.title}`,
     description: `${location.intro} Explore roofing services for ${location.title}.`,
-  };
+    path: `/locations/${location.slug}`,
+  });
 }
 
 export default async function LocationDetailPage({ params }: Props) {
@@ -30,6 +33,11 @@ export default async function LocationDetailPage({ params }: Props) {
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Locations", path: "/locations" },
+        { name: location.title, path: `/locations/${location.slug}` },
+      ])} />
       <SiteHero
         inner
         eyebrow={`Roofing in ${location.title}`}
@@ -44,14 +52,14 @@ export default async function LocationDetailPage({ params }: Props) {
       <section className={styles.detailSection}>
         <div className={styles.sectionShell}>
           <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
-            <Link href="/2">Home</Link><span>/</span><Link href="/2/locations">Locations</Link><span>/</span><span>{location.title}</span>
+            <Link href="/">Home</Link><span>/</span><Link href="/locations">Locations</Link><span>/</span><span>{location.title}</span>
           </nav>
           <div className={styles.detailGrid}>
             <div className={styles.detailCopy}>
               <MapPin aria-hidden="true" />
               <h2>Roofing for homes in {location.title}.</h2>
               <p>{location.short}</p>
-              <Link className={styles.primaryButton} href="/2/contact">Request assessment<ArrowRight aria-hidden="true" /></Link>
+              <Link className={styles.primaryButton} href="/contact">Request assessment<ArrowRight aria-hidden="true" /></Link>
             </div>
             <div className={styles.scopePanel}>
               <CloudRain aria-hidden="true" />
@@ -64,7 +72,7 @@ export default async function LocationDetailPage({ params }: Props) {
             <h2>How we can help with your roof</h2>
             <div>
               {services.map((service) => (
-                <Link href={`/2/services/${service.slug}`} key={service.slug}>
+                <Link href={`/services/${service.slug}`} key={service.slug}>
                   <span>{service.title}</span><ArrowRight aria-hidden="true" />
                 </Link>
               ))}

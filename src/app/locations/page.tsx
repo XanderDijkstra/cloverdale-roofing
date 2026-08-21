@@ -4,15 +4,19 @@ import { ArrowRight, MapPin } from "lucide-react";
 import SiteHero from "../_components/site-hero";
 import styles from "../homepage2.module.css";
 import { locations } from "../site-data";
+import JsonLd from "@/components/json-ld";
+import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Roofing Locations",
   description: "Roofing service areas across Cloverdale, Clayton Heights, South Surrey, and nearby Langley.",
-};
+  path: "/locations",
+});
 
 export default function LocationsPage() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Locations", path: "/locations" }])} />
       <SiteHero
         inner
         eyebrow="Roofing locations"
@@ -27,7 +31,7 @@ export default function LocationsPage() {
       <section className={styles.directorySection}>
         <div className={styles.sectionShell}>
           <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
-            <Link href="/2">Home</Link><span>/</span><span>Locations</span>
+            <Link href="/">Home</Link><span>/</span><span>Locations</span>
           </nav>
           <div className={styles.directoryIntro}>
             <h2>Roofing services where you live.</h2>
@@ -39,7 +43,7 @@ export default function LocationsPage() {
                 <MapPin aria-hidden="true" />
                 <h2>{location.title}</h2>
                 <p>{location.short}</p>
-                <Link className={styles.textLink} href={`/2/locations/${location.slug}`}>
+                <Link className={styles.textLink} href={`/locations/${location.slug}`}>
                   Roofing in {location.title}<ArrowRight aria-hidden="true" />
                 </Link>
               </article>
