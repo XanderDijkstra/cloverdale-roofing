@@ -35,6 +35,7 @@ export default function QuoteForm({ submitLabel = "Request assessment" }: { comp
       `Service: ${selectedService}`,
       `Name: ${data.get("name")}`,
       `Email: ${data.get("email")}`,
+      `Phone: ${data.get("phone")}`,
       `Address: ${data.get("address")}`,
     ].join("\n"));
 
@@ -103,10 +104,16 @@ export default function QuoteForm({ submitLabel = "Request assessment" }: { comp
               <input name="email" type="email" autoComplete="email" required placeholder="you@example.com" />
             </label>
           </div>
-          <label>
-            Property address
-            <input name="address" autoComplete="street-address" required placeholder="123 Main Street, Cloverdale" />
-          </label>
+          <div className="field-row">
+            <label>
+              Phone
+              <input name="phone" type="tel" inputMode="tel" autoComplete="tel" required placeholder="(604) 555-0123" />
+            </label>
+            <label>
+              Property address
+              <input name="address" autoComplete="street-address" required placeholder="123 Main Street, Cloverdale" />
+            </label>
+          </div>
           <button className="button form-submit" type="submit">
             {submitLabel} <ArrowUpRight size={18} aria-hidden="true" />
           </button>
