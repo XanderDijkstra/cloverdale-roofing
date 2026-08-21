@@ -22,10 +22,10 @@ import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Cloverdale Roofing Concept | Cloverdale Roofing Co.",
+    absolute: "Roof Repair & Replacement in Cloverdale, BC | Cloverdale Roofing Co.",
   },
   description:
-    "An independent website concept for roof repair, replacement, cedar conversion, and roof inspections in Cloverdale and Surrey, BC.",
+    "Roof repair, replacement, cedar conversion, and roof inspections for homeowners in Cloverdale and Surrey, BC.",
   alternates: {
     canonical: "/",
   },
@@ -43,8 +43,8 @@ const process = [
     icon: ClipboardCheck,
   },
   {
-    title: "Compare workable paths",
-    text: "Separate repair, replacement, and conversion into clear options instead of forcing every roof toward one answer.",
+    title: "Recommend the right work",
+    text: "We explain what needs attention now, what can wait, and whether a repair or replacement offers better value.",
     icon: Hammer,
   },
   {
@@ -58,12 +58,12 @@ const faqs = [
   {
     question: "When should I request a roof inspection?",
     answer:
-      "An inspection is useful after a leak, visible material damage, a severe weather event, or when the roof history is unclear. It gives the repair or replacement decision a factual starting point.",
+      "Request an inspection after a leak, visible damage, severe weather, or when the roof history is unclear. We will identify what needs attention and explain the next step.",
   },
   {
-    question: "How is a repair decision different from replacement?",
+    question: "When does a roof need replacement instead of repair?",
     answer:
-      "A repair targets a defined failure while the surrounding roof remains serviceable. Replacement becomes the stronger path when age, repeated failures, or system-wide concerns make isolated work poor value.",
+      "We recommend repair when the failure is isolated and the surrounding roof remains serviceable. Replacement makes more sense when age or recurring problems make another repair poor value.",
   },
   {
     question: "Can an older cedar roof be converted?",
@@ -82,8 +82,8 @@ export default function HomepageTwo() {
     <main>
       <SiteHero
         eyebrow="Roofing in Cloverdale, BC"
-        title="Cloverdale roofing made clear."
-        text="Understand the problem, compare your options, and choose the right next step for your home."
+        title="Roof repair and replacement in Cloverdale, BC."
+        text="We inspect, repair, and replace residential roofs for Cloverdale's wet Lower Mainland weather."
         image="/images/homepage2/cloverdale-roof-hero.webp"
         imageAlt="Rain-wet Cloverdale home with a dark architectural-shingle roof"
         secondaryHref="/2/services"
@@ -100,15 +100,15 @@ export default function HomepageTwo() {
       <section className={styles.decisionSection}>
         <div className={styles.sectionShell}>
           <div className={styles.decisionIntro}>
-            <h2>Start with the roof you have.</h2>
-            <p>The useful question is what the current roof needs, and why.</p>
+            <h2>Repair or replace? We will show you why.</h2>
+            <p>We inspect the complete roof, explain what we find, and recommend work that fits its actual condition.</p>
           </div>
 
           <div className={styles.decisionGrid}>
             <article>
               <span className={styles.decisionIcon} aria-hidden="true"><Wrench /></span>
-              <h3>Repair the defined problem</h3>
-              <p>A focused repair can make sense when the failure is isolated and the surrounding roof remains serviceable.</p>
+              <h3>We repair isolated roof problems</h3>
+              <p>When the surrounding roof is still sound, we fix the source of the problem without pushing an unnecessary replacement.</p>
               <ul>
                 <li><Check aria-hidden="true" />Leak or flashing problem with a clear source</li>
                 <li><Check aria-hidden="true" />Limited missing or damaged material</li>
@@ -118,8 +118,8 @@ export default function HomepageTwo() {
 
             <article>
               <span className={styles.decisionIcon} aria-hidden="true"><House /></span>
-              <h3>Replace when the system is tired</h3>
-              <p>Replacement deserves consideration when age, repeated failures, or wider condition issues change the value of another repair.</p>
+              <h3>We replace worn-out roof systems</h3>
+              <p>When age or recurring failures make another repair poor value, we plan a complete replacement built around your home.</p>
               <ul>
                 <li><Check aria-hidden="true" />Problems across several roof areas</li>
                 <li><Check aria-hidden="true" />Recurring repairs with short-lived results</li>
@@ -134,8 +134,8 @@ export default function HomepageTwo() {
         <div className={styles.sectionShell}>
           <div className={styles.stackHeading}>
             <div>
-              <h2>Four services. Four dedicated pages.</h2>
-              <p>Choose the service that matches the decision in front of you.</p>
+              <h2>Roofing services for Cloverdale homes.</h2>
+              <p>From a single leak to a complete roof replacement, we take care of the work your home needs.</p>
             </div>
           </div>
 
@@ -163,7 +163,7 @@ export default function HomepageTwo() {
                     <h3>{service.title}</h3>
                     <p>{service.short}</p>
                     <Link href={`/2/services/${service.slug}`}>
-                      View service page
+                      Learn about {service.title.toLowerCase()}
                       <ChevronRight strokeWidth={2} aria-hidden="true" />
                     </Link>
                   </div>
@@ -177,8 +177,8 @@ export default function HomepageTwo() {
       <section className={styles.locationDirectory}>
         <div className={styles.sectionShell}>
           <div className={styles.directoryHeading}>
-            <h2>Roofing locations around Cloverdale.</h2>
-            <p>Each genuine service area has its own page, local context, and route back to the relevant roofing services.</p>
+            <h2>Roofing across Cloverdale and nearby communities.</h2>
+            <p>See where we provide roof inspections, repairs, replacements, and cedar roof conversions.</p>
             <Link className={styles.textLink} href="/2/locations">
               View all locations
               <ArrowRight strokeWidth={2} aria-hidden="true" />
@@ -200,8 +200,8 @@ export default function HomepageTwo() {
         <div className={styles.sectionShell}>
           <div className={styles.stackHeading}>
             <div>
-              <h2>A useful scope removes surprises.</h2>
-              <p>Good roofing work starts before material reaches the roof.</p>
+              <h2>What to expect from our roofing process.</h2>
+              <p>We inspect carefully, explain the work, protect your property, and clean up when the job is complete.</p>
             </div>
           </div>
 
@@ -241,8 +241,8 @@ export default function HomepageTwo() {
         <div className={styles.sectionShell}>
           <div className={styles.faqLayout}>
             <div className={styles.faqHeading}>
-              <h2>Questions before the quote.</h2>
-              <p>A clearer first conversation leads to a more useful roofing scope.</p>
+              <h2>Questions about your roof?</h2>
+              <p>Tell us what you have noticed and we will help you determine the right next step.</p>
               <Link className={styles.textLink} href="/2/contact">
                 Request assessment
                 <ArrowRight strokeWidth={2} aria-hidden="true" />
@@ -263,8 +263,8 @@ export default function HomepageTwo() {
 
       <section className={styles.finalCta}>
         <div>
-          <h2>Know what your Cloverdale roof needs next.</h2>
-          <p>Start with an assessment and turn the condition into a clear decision.</p>
+          <h2>Need a roofer in Cloverdale?</h2>
+          <p>Tell us what is happening and request an assessment for your home.</p>
         </div>
         <Link className={styles.finalButton} href="/2/contact">
           Request assessment

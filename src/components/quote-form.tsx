@@ -20,7 +20,7 @@ export default function QuoteForm({ compact = false, submitLabel = "Prepare my r
       <div className="field-row"><label>Neighbourhood<input name="area" autoComplete="address-level2" required placeholder="Cloverdale" /></label><label>What do you need?<select name="project" defaultValue="Roof inspection"><option>Roof inspection</option><option>Leak repair</option><option>Roof replacement</option><option>Cedar conversion</option><option>Not sure yet</option></select></label></div>
       {!compact && <label>What is happening?<textarea name="details" rows={4} placeholder="Tell us what you have noticed and when it started." /></label>}
       <button className="button form-submit" type="submit">{submitLabel} <ArrowUpRight size={18} /></button>
-      <p className="form-note">{ready ? <><Check size={15} /> Your email app should open with the details ready to send.</> : "No pressure. Start with the roof, the concern, and your timeline."}</p>
+      <p className="form-note">{ready ? <><Check size={15} /> Your email app should open with the details ready to send.</> : "Tell us what changed, what you can see, and when you need help."}</p>
     </form>
   );
 }

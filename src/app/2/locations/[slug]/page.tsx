@@ -33,12 +33,12 @@ export default async function LocationDetailPage({ params }: Props) {
       <SiteHero
         inner
         eyebrow={`Roofing in ${location.title}`}
-        title={`${location.title} roofing decisions made clear.`}
+        title={`Roof repair and replacement in ${location.title}.`}
         text={location.intro}
         image="/images/homepage2/cloverdale-roof-hero.webp"
         imageAlt={`Rain-wet home representing roofing service in ${location.title}`}
         formTitle={`Request a roof assessment in ${location.title}`}
-        formText="Share the roof concern and property area to start a useful scope."
+        formText="Tell us what you have noticed and we will help you plan the next step."
       />
 
       <section className={styles.detailSection}>
@@ -49,7 +49,7 @@ export default async function LocationDetailPage({ params }: Props) {
           <div className={styles.detailGrid}>
             <div className={styles.detailCopy}>
               <MapPin aria-hidden="true" />
-              <h2>Roofing support for {location.title}.</h2>
+              <h2>Roofing for homes in {location.title}.</h2>
               <p>{location.short}</p>
               <Link className={styles.primaryButton} href="/2/contact">Request assessment<ArrowRight aria-hidden="true" /></Link>
             </div>
@@ -61,7 +61,7 @@ export default async function LocationDetailPage({ params }: Props) {
           </div>
 
           <div className={styles.relatedServices}>
-            <h2>Roofing services available</h2>
+            <h2>How we can help with your roof</h2>
             <div>
               {services.map((service) => (
                 <Link href={`/2/services/${service.slug}`} key={service.slug}>

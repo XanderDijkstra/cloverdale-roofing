@@ -17,8 +17,8 @@ export default function ServicesPage() {
       <SiteHero
         inner
         eyebrow="Roofing services in Cloverdale"
-        title="The right work for your Cloverdale roof."
-        text="Start with the condition, then choose the service that fits the roof."
+        title="Roofing services for Cloverdale homes."
+        text="We inspect, repair, replace, and convert residential roofs throughout Cloverdale and the surrounding area."
         image="/images/homepage2/cloverdale-roof-hero.webp"
         imageAlt="Rain-wet Cloverdale home with a dark architectural-shingle roof"
         formTitle="Request a roof assessment"
@@ -30,8 +30,8 @@ export default function ServicesPage() {
             <Link href="/2">Home</Link><span>/</span><span>Services</span>
           </nav>
           <div className={styles.directoryIntro}>
-            <h2>Every core service gets its own page.</h2>
-            <p>Compare the problem, scope, and next step before requesting an assessment.</p>
+            <h2>How we can help with your roof.</h2>
+            <p>Choose the type of work you need, or request an inspection if you are not sure where to start.</p>
           </div>
           <div className={styles.directoryGrid}>
             {services.map((service) => (
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                     {service.includes.slice(0, 3).map((item) => <li key={item}><Check aria-hidden="true" />{item}</li>)}
                   </ul>
                   <Link className={styles.textLink} href={`/2/services/${service.slug}`}>
-                    View service page<ArrowRight aria-hidden="true" />
+                    Learn about {service.title.toLowerCase()}<ArrowRight aria-hidden="true" />
                   </Link>
                 </div>
               </article>

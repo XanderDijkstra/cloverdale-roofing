@@ -16,8 +16,8 @@ export default function LocationsPage() {
       <SiteHero
         inner
         eyebrow="Roofing locations"
-        title="Local roofing centred on Cloverdale."
-        text="Explore the genuine areas covered and the roofing considerations that matter there."
+        title="Roofing services near Cloverdale."
+        text="We inspect, repair, and replace roofs throughout Cloverdale and the surrounding communities we serve."
         image="/images/homepage2/cloverdale-roof-hero.webp"
         imageAlt="Cloverdale home with a dark roof after rainfall"
         formTitle="Check your property area"
@@ -30,8 +30,8 @@ export default function LocationsPage() {
             <Link href="/2">Home</Link><span>/</span><span>Locations</span>
           </nav>
           <div className={styles.directoryIntro}>
-            <h2>Each location has a useful destination.</h2>
-            <p>Location pages explain real coverage and link visitors to the roofing services available.</p>
+            <h2>Roofing services where you live.</h2>
+            <p>Find your area below, then tell us what is happening with your roof.</p>
           </div>
           <div className={styles.locationPageGrid}>
             {locations.map((location) => (
@@ -40,7 +40,7 @@ export default function LocationsPage() {
                 <h2>{location.title}</h2>
                 <p>{location.short}</p>
                 <Link className={styles.textLink} href={`/2/locations/${location.slug}`}>
-                  View location page<ArrowRight aria-hidden="true" />
+                  Roofing in {location.title}<ArrowRight aria-hidden="true" />
                 </Link>
               </article>
             ))}

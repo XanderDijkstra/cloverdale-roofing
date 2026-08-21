@@ -26,7 +26,7 @@ export default function HomepageTwoLayout({ children }: { children: React.ReactN
     <div id="homepage2" className={`${styles.page} ${archivo.variable}`}>
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <Link className={styles.brand} href="/2" aria-label="Cloverdale Roofing Co. homepage concept">
+          <Link className={styles.brand} href="/2" aria-label="Cloverdale Roofing Co. homepage">
             <span className={styles.brandMark} aria-hidden="true">
               <House strokeWidth={2} />
             </span>
@@ -36,7 +36,7 @@ export default function HomepageTwoLayout({ children }: { children: React.ReactN
             </span>
           </Link>
 
-          <nav className={styles.nav} aria-label="Concept website navigation">
+          <nav className={styles.nav} aria-label="Website navigation">
             <Link href="/2/services">Services</Link>
             <Link href="/2/locations">Locations</Link>
             <Link href="/2/about">About</Link>

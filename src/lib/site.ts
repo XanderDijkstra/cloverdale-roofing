@@ -21,7 +21,7 @@ export const services = [
     image: "/images/service-roof-replacement-higgsfield.webp",
     imageAlt: "New architectural shingles on a Cloverdale home after rainfall",
     short: "A complete roofing system planned for Lower Mainland rain, wind, and long wet seasons.",
-    intro: "When repair is no longer the sensible choice, we help you compare materials and build a clear replacement scope without pressure or vague allowances.",
+    intro: "When repair is no longer the sensible choice, we help you select the right materials and install a complete roofing system for your home.",
     includes: ["Full tear-off and deck inspection", "Underlayment, flashing and ventilation review", "Architectural shingle options", "Site protection and thorough cleanup"],
   },
   {

@@ -37,7 +37,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         image={service.image}
         imageAlt={service.imageAlt}
         formTitle={`Request a ${service.title.toLowerCase()} assessment`}
-        formText="Share the roof concern and property area to start a useful scope."
+        formText="Tell us what you have noticed and where your property is located."
       />
 
       <section className={styles.detailSection}>
@@ -47,7 +47,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           </nav>
           <div className={styles.detailGrid}>
             <div className={styles.detailCopy}>
-              <h2>Start with a clear scope.</h2>
+              <h2>Roofing work built around your home.</h2>
               <p>{service.intro}</p>
               <Link className={styles.primaryButton} href="/2/contact">
                 Request assessment<ArrowRight aria-hidden="true" />
@@ -63,8 +63,8 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className={styles.relatedBand}>
             <House aria-hidden="true" />
             <div>
-              <h2>Need help choosing a service?</h2>
-              <p>A roof inspection can establish the condition before a repair or replacement decision.</p>
+              <h2>Not sure what your roof needs?</h2>
+              <p>We can inspect the roof, find the cause of the problem, and recommend the right repair or replacement.</p>
             </div>
             <Link className={styles.textLink} href="/2/services/roof-inspection">View roof inspection<ArrowRight aria-hidden="true" /></Link>
           </div>
