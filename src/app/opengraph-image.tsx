@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
       <div style={{ display: "flex", fontSize: 72, lineHeight: 1.02, maxWidth: 940, fontWeight: 700 }}>
         Roof repair and replacement in Cloverdale, BC.
       </div>
-      <div style={{ display: "flex", fontSize: 25, color: "#c7d4da" }}>www.cloverdaleroofingco.com</div>
+      <div style={{ display: "flex", fontSize: 25, color: "#c7d4da" }}>cloverdaleroofingco.com</div>
     </div>,
     size,
   );

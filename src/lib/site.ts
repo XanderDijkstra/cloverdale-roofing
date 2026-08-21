@@ -2,7 +2,7 @@ export const site = {
   name: "Cloverdale Roofing Co.",
   email: "info@fx-media.no",
   region: "Cloverdale, Surrey, BC",
-  url: "https://www.cloverdaleroofingco.com",
+  url: "https://cloverdaleroofingco.com",
 };
 
 export const services = [
