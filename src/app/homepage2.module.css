@@ -200,22 +200,12 @@
 }
 
 .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin-bottom: 24px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-}
-
-.eyebrow::before {
-  width: 28px;
-  height: 3px;
-  background: var(--accent-strong);
-  content: "";
 }
 
 .hero h1 {
@@ -263,7 +253,7 @@
 .leadPanel {
   padding: 32px;
   border-radius: var(--radius);
-  border-top: 5px solid var(--accent);
+  border: 1px solid var(--accent);
   background: rgba(241, 244, 245, .97);
   box-shadow: 0 28px 80px rgba(2, 12, 18, .34);
   color: #102537;
