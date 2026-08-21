@@ -1,0 +1,69 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import QuoteForm from "@/components/quote-form";
+import styles from "../homepage2.module.css";
+
+type SiteHeroProps = {
+  eyebrow: string;
+  title: string;
+  text: string;
+  image: string;
+  imageAlt: string;
+  formTitle?: string;
+  formText?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+  inner?: boolean;
+};
+
+export default function SiteHero({
+  eyebrow,
+  title,
+  text,
+  image,
+  imageAlt,
+  formTitle = "Tell us what is happening",
+  formText = "Send the basics and start with a clear roofing assessment.",
+  secondaryHref,
+  secondaryLabel,
+  inner = false,
+}: SiteHeroProps) {
+  return (
+    <section className={`${styles.hero} ${inner ? styles.innerHero : ""}`}>
+      <div className={styles.heroMedia}>
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          preload={!inner}
+          fetchPriority={!inner ? "high" : undefined}
+          sizes="100vw"
+        />
+      </div>
+      <div className={styles.heroScrim} aria-hidden="true" />
+
+      <div className={styles.heroInner}>
+        <div className={styles.heroCopy}>
+          <p className={styles.eyebrow}>{eyebrow}</p>
+          <h1>{title}</h1>
+          <p className={styles.heroText}>{text}</p>
+          {secondaryHref && secondaryLabel ? (
+            <Link className={styles.heroTextLink} href={secondaryHref}>
+              {secondaryLabel}
+              <ArrowRight strokeWidth={2} aria-hidden="true" />
+            </Link>
+          ) : null}
+        </div>
+
+        <aside className={styles.leadPanel} aria-label="Roof assessment request">
+          <div className={styles.leadPanelHeading}>
+            <h2>{formTitle}</h2>
+            <p>{formText}</p>
+          </div>
+          <QuoteForm compact submitLabel="Request assessment" />
+        </aside>
+      </div>
+    </section>
+  );
+}
