@@ -15,6 +15,7 @@ type SiteHeroProps = {
   secondaryHref?: string;
   secondaryLabel?: string;
   inner?: boolean;
+  location?: string;
 };
 
 export default function SiteHero({
@@ -28,6 +29,7 @@ export default function SiteHero({
   secondaryHref,
   secondaryLabel,
   inner = false,
+  location,
 }: SiteHeroProps) {
   return (
     <section className={`${styles.hero} ${inner ? styles.innerHero : ""}`}>
@@ -36,8 +38,8 @@ export default function SiteHero({
           src={image}
           alt={imageAlt}
           fill
-          preload={!inner}
-          fetchPriority={!inner ? "high" : undefined}
+          preload
+          fetchPriority="high"
           sizes="100vw"
         />
       </div>
@@ -56,12 +58,12 @@ export default function SiteHero({
           ) : null}
         </div>
 
-        <aside className={styles.leadPanel} aria-label="Roof assessment request">
+        <aside id="assessment-form" className={styles.leadPanel} aria-label="Roof assessment request">
           <div className={styles.leadPanelHeading}>
             <h2>{formTitle}</h2>
             <p>{formText}</p>
           </div>
-          <QuoteForm compact submitLabel="Request assessment" />
+          <QuoteForm compact submitLabel="Request assessment" location={location} />
         </aside>
       </div>
     </section>

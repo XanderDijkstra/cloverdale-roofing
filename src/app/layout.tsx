@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Archivo } from "next/font/google";
-import { ArrowRight, House } from "lucide-react";
+import { House } from "lucide-react";
+import SiteHeader from "@/components/site-header";
 import JsonLd from "@/components/json-ld";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -26,23 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <JsonLd data={[websiteSchema(), organizationSchema()]} />
         <div id="homepage2" className={`${styles.page} ${archivo.variable}`}>
-          <header className={styles.header}>
-            <div className={styles.headerInner}>
-              <Link className={styles.brand} href="/" aria-label="Cloverdale Roofing Co. homepage">
-                <span className={styles.brandMark} aria-hidden="true"><House strokeWidth={2} /></span>
-                <span>Cloverdale<strong>Roofing Co.</strong></span>
-              </Link>
-              <nav className={styles.nav} aria-label="Website navigation">
-                <Link href="/services">Services</Link>
-                <Link href="/locations">Locations</Link>
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
-              </nav>
-              <Link className={styles.headerCta} href="/contact">
-                Request assessment<ArrowRight strokeWidth={2} aria-hidden="true" />
-              </Link>
-            </div>
-          </header>
+          <SiteHeader />
 
           {children}
 

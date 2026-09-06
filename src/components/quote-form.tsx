@@ -22,7 +22,7 @@ const serviceOptions = [
   { value: "Other", label: "Other", icon: CircleEllipsis },
 ] as const;
 
-export default function QuoteForm({ submitLabel = "Request assessment" }: { compact?: boolean; submitLabel?: string }) {
+export default function QuoteForm({ submitLabel = "Request assessment", location }: { compact?: boolean; submitLabel?: string; location?: string }) {
   const [screen, setScreen] = useState<"service" | "details">("service");
   const [selectedService, setSelectedService] = useState("");
   const [ready, setReady] = useState(false);
@@ -33,6 +33,7 @@ export default function QuoteForm({ submitLabel = "Request assessment" }: { comp
     const subject = encodeURIComponent(`Roofing inquiry from ${data.get("name")}`);
     const body = encodeURIComponent([
       `Service: ${selectedService}`,
+      ...(location ? [`Service area: ${location}`] : []),
       `Name: ${data.get("name")}`,
       `Email: ${data.get("email")}`,
       `Phone: ${data.get("phone")}`,
@@ -111,7 +112,7 @@ export default function QuoteForm({ submitLabel = "Request assessment" }: { comp
             </label>
             <label>
               Property address
-              <input name="address" autoComplete="street-address" required placeholder="123 Main Street, Cloverdale" />
+              <input name="address" autoComplete="street-address" required placeholder={`Street address, ${location ?? "Cloverdale"}`} />
             </label>
           </div>
           <button className="button form-submit" type="submit">

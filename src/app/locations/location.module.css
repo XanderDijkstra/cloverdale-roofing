@@ -1,0 +1,27 @@
+.section { margin-top: clamp(68px, 8vw, 110px); }
+.heading { max-width: 760px; margin-bottom: 38px; }
+.heading > p, .label { color: var(--muted); font-size: 13px; font-weight: 650; }
+.heading h2, .quote h2, .pricing h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.06; letter-spacing: -.045em; margin-bottom: 24px; }
+.planning { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.planning article { padding: 32px; border-right: 1px solid var(--line); }
+.planning article:first-child { padding-left: 0; }
+.planning article:last-child { padding-right: 0; border: 0; }
+.planning article > span { color: var(--muted); font-size: 14px; }
+.planning h3 { margin-top: 40px; }
+.planning h3, .services h3, .quote h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.025em; margin-bottom: 16px; }
+.planning p, .services p, .quote p, .pricing p { font-size: 16px; line-height: 1.75; color: var(--muted); }
+.services { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.services article { display: flex; flex-direction: column; align-items: flex-start; padding: 36px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.services article a { margin-top: auto; padding-top: 12px; }
+.quote { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; background: var(--surface); border-radius: 14px; padding: 48px; scroll-margin-top: 30px; }
+.quote ol { margin: 0; padding-left: 24px; }
+.quote li { padding-left: 12px; margin-bottom: 30px; }
+.quote li:last-child { margin-bottom: 0; }
+.pricing { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; padding-block: 40px; border-block: 1px solid var(--line); }
+@media (max-width: 767px) {
+  .planning, .services, .quote, .pricing { grid-template-columns: 1fr; }
+  .planning article, .planning article:first-child, .planning article:last-child { padding: 28px 0; border: 0; border-bottom: 1px solid var(--line); }
+  .planning h3 { margin-top: 22px; }
+  .services article, .quote { padding: 28px; }
+  .quote, .pricing { gap: 28px; }
+}
