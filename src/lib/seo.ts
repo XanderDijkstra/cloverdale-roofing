@@ -12,8 +12,8 @@ export function createPageMetadata({ title, description, path, absoluteTitle = f
     title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
-    openGraph: { title, description, url: path },
-    twitter: { title, description },
+    openGraph: { title, description, url: path, siteName: site.name, locale: "en_CA", type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Cloverdale Roofing Co. — residential roofing in Cloverdale and Surrey" }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] },
   };
 }
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteFooter from "@/components/site-footer";
+import MobileAssessment from "@/components/mobile-assessment";
 import { Archivo } from "next/font/google";
-import { House } from "lucide-react";
+
 import SiteHeader from "@/components/site-header";
 import JsonLd from "@/components/json-ld";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   title: { default: "Cloverdale Roofing Co.", template: "%s | Cloverdale Roofing Co." },
   description: "Roof repair, replacement, cedar conversion, and roof inspections for homeowners in Cloverdale and Surrey, BC.",
   applicationName: site.name,
+  icons: { icon: "/icon", apple: "/icon" },
   openGraph: { siteName: site.name, locale: "en_CA", type: "website" },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
@@ -27,24 +29,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <JsonLd data={[websiteSchema(), organizationSchema()]} />
         <div id="homepage2" className={`${styles.page} ${archivo.variable}`}>
+          <a className="skip-link" href="#main-content">Skip to content</a>
           <SiteHeader />
 
           {children}
 
-          <footer className={styles.footer}>
-            <div className={styles.footerBrand}>
-              <span className={styles.brandMark} aria-hidden="true"><House strokeWidth={2} /></span>
-              <span>Cloverdale Roofing Co.</span>
-            </div>
-            <p>Roof repair, replacement, cedar conversion, and inspections for Cloverdale and Surrey, BC.</p>
-            <div className={styles.footerLinks}>
-              <Link href="/services">Services</Link>
-              <Link href="/locations">Locations</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
-            <small>© 2026 Cloverdale Roofing Co.</small>
-          </footer>
+          <SiteFooter />
+          <MobileAssessment />
         </div>
       </body>
     </html>

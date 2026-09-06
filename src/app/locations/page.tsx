@@ -6,6 +6,7 @@ import styles from "../homepage2.module.css";
 import { locations } from "../site-data";
 import JsonLd from "@/components/json-ld";
 import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
+import { FinalCta } from "@/components/page-sections";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Roofing Locations",
@@ -15,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function LocationsPage() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Locations", path: "/locations" }])} />
       <SiteHero
         inner
@@ -51,6 +52,7 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
+      <FinalCta title="Not sure whether we cover your property?" text="Send the full address and your roofing concern so we can confirm coverage and availability." href="#assessment-form" />
     </main>
   );
 }

@@ -20,6 +20,7 @@ import styles from "./homepage2.module.css";
 import { locations } from "./site-data";
 import { createPageMetadata } from "@/lib/seo";
 import { services } from "@/lib/site";
+import { GuideTeaser } from "@/components/page-sections";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Roof Repair & Replacement in Cloverdale, BC | Cloverdale Roofing Co.",
@@ -76,7 +77,7 @@ const faqs = [
 
 export default function HomepageTwo() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <SiteHero
         eyebrow="Roofing in Cloverdale, BC"
         title="Roof repair and replacement in Cloverdale, BC."
@@ -258,6 +259,7 @@ export default function HomepageTwo() {
         </div>
       </section>
 
+      <GuideTeaser />
       <section className={styles.finalCta}>
         <div>
           <h2>Need a roofer in Cloverdale?</h2>

@@ -7,6 +7,7 @@ import styles from "../homepage2.module.css";
 import JsonLd from "@/components/json-ld";
 import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
 import { services } from "@/lib/site";
+import { GuideTeaser, FinalCta, ServiceAreas } from "@/components/page-sections";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Roofing Services",
@@ -16,7 +17,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function ServicesPage() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }])} />
       <SiteHero
         inner
@@ -58,6 +59,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <ServiceAreas /><GuideTeaser /><FinalCta href="#assessment-form" />
     </main>
   );
 }

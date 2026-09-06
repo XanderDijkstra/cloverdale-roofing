@@ -80,6 +80,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
             </details>
           ))}
           <Link href="/about" aria-current={pathname === "/about" ? "page" : undefined}>About</Link>
+          <Link href="/roofing-guide" aria-current={pathname === "/roofing-guide" ? "page" : undefined}>Homeowner guide</Link>
           <Link href="/contact" aria-current={pathname === "/contact" ? "page" : undefined}>Contact</Link>
           <Link className={nav.mobileCta} href="/contact">Request assessment<ArrowRight size={18} aria-hidden="true" /></Link>
         </nav>

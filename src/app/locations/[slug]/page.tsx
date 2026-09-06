@@ -38,7 +38,7 @@ export default async function LocationDetailPage({ params }: Props) {
   const content = locationContent[slug];
 
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <JsonLd data={[breadcrumbSchema([
         { name: "Home", path: "/" },
         { name: "Locations", path: "/locations" },
@@ -55,7 +55,7 @@ export default async function LocationDetailPage({ params }: Props) {
       <SiteHero
         inner
         eyebrow={`Roofing in ${location.title}`}
-        title={`Roof repair and replacement in ${location.title}.`}
+        title={slug === "langley-border" ? "Roof repair and replacement near the Langley border." : `Roof repair and replacement in ${location.title}.`}
         text={location.intro}
         image="/images/homepage2/cloverdale-roof-hero.webp"
         imageAlt={`Rain-wet home representing roofing service in ${location.title}`}

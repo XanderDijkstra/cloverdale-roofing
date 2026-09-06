@@ -24,7 +24,7 @@ export const locations = [
   {
     slug: "south-surrey",
     title: "South Surrey",
-    short: "We help South Surrey homeowners with roof inspections, repairs, and replacements from Grandview to Panorama.",
+    short: "We help South Surrey homeowners assess leaks, plan roof repairs, and review replacement options.",
     intro: "We assess roofing problems across South Surrey and recommend the repair or replacement your home actually needs.",
     considerations: [
       "Shingle, cedar, and low-slope roof details",

@@ -16,6 +16,7 @@ type SiteHeroProps = {
   secondaryLabel?: string;
   inner?: boolean;
   location?: string;
+  service?: string;
 };
 
 export default function SiteHero({
@@ -30,6 +31,7 @@ export default function SiteHero({
   secondaryLabel,
   inner = false,
   location,
+  service,
 }: SiteHeroProps) {
   return (
     <section className={`${styles.hero} ${inner ? styles.innerHero : ""}`}>
@@ -63,7 +65,7 @@ export default function SiteHero({
             <h2>{formTitle}</h2>
             <p>{formText}</p>
           </div>
-          <QuoteForm compact submitLabel="Request assessment" location={location} />
+          <QuoteForm compact location={location} initialService={service} />
         </aside>
       </div>
     </section>

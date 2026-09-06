@@ -15,6 +15,8 @@
 .links strong { display: block; font-size: 16px; margin-bottom: 9px; }
 .links small { display: block; color: var(--muted); font-size: 13px; line-height: 1.6; font-weight: 400; }
 .links a > svg:last-child { margin-left: auto; }
+.links a[aria-current="page"] { text-decoration: none !important; }
+.links a[aria-current="page"] strong { text-decoration: underline; text-underline-offset: 5px; }
 .mobileToggle, .mobileCta { display: none; }
 @media (max-width: 1050px) {
   .mobileToggle { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 10px 12px; border-radius: 6px; font: inherit; font-size: 14px; cursor: pointer; margin-left: auto; }

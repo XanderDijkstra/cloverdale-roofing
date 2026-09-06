@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...locations.map((location) => `/locations/${location.slug}`),
     "/about",
     "/contact",
+    "/roofing-guide",
+    "/privacy",
   ];
 
   return routes.map((path) => ({ url: absoluteUrl(path) }));

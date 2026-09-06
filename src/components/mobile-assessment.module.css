@@ -1,0 +1,2 @@
+.action { display: none; }
+@media (max-width: 767px) { .action { position: fixed; bottom: max(12px, env(safe-area-inset-bottom)); left: 16px; right: 16px; z-index: 15; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; border-radius: 10px; background: var(--accent); color: #102537 !important; box-shadow: 0 6px 24px #07172240; font-size: 14px; font-weight: 750; } }

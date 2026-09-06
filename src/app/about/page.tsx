@@ -5,6 +5,8 @@ import SiteHero from "../_components/site-hero";
 import styles from "../homepage2.module.css";
 import JsonLd from "@/components/json-ld";
 import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
+import { FinalCta, ServiceAreas } from "@/components/page-sections";
+import section from "@/components/page-sections.module.css";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Our Roofing Approach",
@@ -14,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <SiteHero
         inner
@@ -40,6 +42,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className={section.section}><div className={`${styles.sectionShell} ${section.article}`}><h2>A clear conversation before a commitment.</h2><p>We start with the roof problem and your priorities. A localized repair, a planned replacement, and an inspection before a purchase need different scopes. The recommendation should explain the condition of your roof and the work that addresses it.</p><h3>Know what you are agreeing to</h3><p>Before work begins, review the materials, access arrangements, exclusions, payment terms, and estimated schedule. Ask how concealed damage will be documented and how additional work will be authorized.</p><h3>Understand the practical limits</h3><p>Weather, safe access, and concealed construction can limit an assessment or change the work plan. We discuss those limits alongside the findings rather than presenting an inspection as a guarantee about areas that cannot be seen.</p><h3>Keep the handover useful</h3><p>Retain your agreed scope, product details, and any warranty documents. Know which items were completed, which items remain outside the scope, and where to raise a follow-up concern.</p><Link className={styles.textLink} href="/roofing-guide">Questions to ask before choosing roofing work<ArrowRight size={18} aria-hidden="true" /></Link></div></section>
+      <ServiceAreas /><FinalCta href="#assessment-form" />
     </main>
   );
 }

@@ -1,38 +1,40 @@
 # Cloverdale Roofing Co.
 
-Lead-generation website concept for a roofing contractor serving Cloverdale,
-South Surrey, and the Langley border in British Columbia.
+Next.js 16 / React 19 / TypeScript contractor website, deployed to Vercel from `main`.
+Production: https://cloverdaleroofingco.com
 
-## Stack
+The site has 15 public pages: homepage, service and location directories, four services,
+four locations, About, Contact, a homeowner guide, and a privacy notice.
 
-- Next.js 16 App Router
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Vercel
+## Develop and verify
 
-## Routes
-
-- Homepage
-- Roofing services hub
-- Roof repair
-- Roof replacement
-- Cedar roof conversion
-- Roof inspection
-- Service area
-- About and process
-- Contact
-
-## Development
-
-```bash
+```sh
 npm install
 npm run dev
 npx tsc --noEmit
+npm run lint
 npm run build
+npm run check:site
 ```
 
-The current production deployment is a launch concept. Replace the contact
-details and add only verified business credentials, insurance, certifications,
-reviews, warranties, and project photography before attaching a public domain
-or running paid traffic.
+`check:site` audits the built HTML and sitemap for metadata, canonicals, internal links,
+anchors, image alt text, structured data, and the complete public page inventory.
+
+## Content
+
+- Company configuration and services: `src/lib/site.ts`
+- Detailed service content: `src/lib/service-content.ts`
+- Service areas: `src/app/site-data.ts`
+- Detailed location content: `src/app/locations/location-content.ts`
+- Design: `src/app/homepage2.module.css` and component CSS modules
+
+## Operational status
+
+The original build was a roofing contractor concept. The current form prepares an email
+for `info@fx-media.no`; it does not store a CRM lead, send mail from the website, or book
+an appointment. Real provider identity, contact details, reviews, credentials, and project
+photos still need confirmation. Do not invent these or present illustrative images as
+completed work.
+
+See [the implementation review](docs/IMPLEMENTATION.md) for the X-reference mapping,
+implemented practices, verification, and remaining business activation requirements.
