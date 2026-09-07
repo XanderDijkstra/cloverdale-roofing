@@ -1,0 +1,188 @@
+{
+  "checkedAt": "2026-09-07T06:52:59Z",
+  "method": "Unsigned-in browser sessions. Bing cc=ca setlang=en, first page. Copilot Search and Perplexity default models, verbatim queries, no brand or site context added. Explicit BC query context; physical browser location not controlled. Citations read from completed rendered answers. Google separate depth20 Canada en evidence. An uncited answer is a snapshot, not proof of exclusion. Final pass after cedar title correction: same Copilot entry URL reloads, new Perplexity sessions. Perplexity varied to4/6 homepage citations. This is not evidence of a causal ranking gain.",
+  "bing": [
+    {
+      "query": "roof repair Cloverdale BC",
+      "domainPresent": false,
+      "resultPage": 1
+    },
+    {
+      "query": "roof replacement Cloverdale BC",
+      "domainPresent": false,
+      "resultPage": 1
+    },
+    {
+      "query": "cedar roof conversion Cloverdale BC",
+      "domainPresent": false,
+      "resultPage": 1
+    },
+    {
+      "query": "roof inspection Clayton Heights BC",
+      "domainPresent": false,
+      "resultPage": 1
+    },
+    {
+      "query": "roofing South Surrey BC",
+      "domainPresent": false,
+      "resultPage": 1
+    },
+    {
+      "query": "what should a roofing quote include BC",
+      "domainPresent": false,
+      "resultPage": 1
+    }
+  ],
+  "ai": [
+    {
+      "query": "roof repair Cloverdale BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "www.srsroofing.ca",
+        "www.paragonroofingbc.ca",
+        "Bing"
+      ]
+    },
+    {
+      "query": "roof repair Cloverdale BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": true,
+      "sourceUrls": [
+        "https://cloverdaleroofingco.com/",
+        "https://www.paragonroofingbc.ca/surrey/cloverdale-roofing",
+        "https://somervilleroofing.ca/",
+        "https://www.dcroofing.ca/residential/repair-maintenance-services/",
+        "https://southwestroof.ca/gallery/project-in-cloverdale-south-west-roof/",
+        "https://www.paragonroofingbc.ca/blog/when-to-repair-vs-replace-your-roof-in-surrey"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/700ad606-2097-45a7-8fd5-81b302feb733"
+    },
+    {
+      "query": "roof replacement Cloverdale BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "www.paragonroofingbc.ca",
+        "Bing"
+      ]
+    },
+    {
+      "query": "roof replacement Cloverdale BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": true,
+      "sourceUrls": [
+        "https://cloverdaleroofingco.com/",
+        "https://www.paragonroofingbc.ca/surrey/cloverdale-roofing",
+        "https://accountableroofing.ca/",
+        "https://stonnex.com/surrey-roofing.html",
+        "https://www.roofbc.com/roofers-near/cloverdale"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/b9b9b742-8e2a-4fe7-b39b-66662fb45c44"
+    },
+    {
+      "query": "cedar roof conversion Cloverdale BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "accountableroofing.ca",
+        "www.paragonroofingbc.ca",
+        "southwestroofer.ca"
+      ]
+    },
+    {
+      "query": "cedar roof conversion Cloverdale BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": true,
+      "sourceUrls": [
+        "https://cloverdaleroofingco.com/",
+        "https://surlangroofing.com/roofing-projects/cedar-roof-conversion-in-south-surrey-bc/",
+        "https://www.accountableroofing.ca/cedar_conversions.php",
+        "https://southwestroofsolutions.ca/",
+        "https://bulletproofroofsystems.com/roofing-services/cedar-roof-conversion/"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/92006fb8-4e49-403f-ba1b-ad9b9c0f64e2"
+    },
+    {
+      "query": "roof inspection Clayton Heights BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "bcroofinspections.com",
+        "www.srsroofing.ca",
+        "www.paragonroofingbc.ca",
+        "Bing"
+      ]
+    },
+    {
+      "query": "roof inspection Clayton Heights BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": true,
+      "sourceUrls": [
+        "https://www.bcroofinspections.com/",
+        "https://www.srsroofing.ca/roofing-contractor-in-clayton-heights/",
+        "https://cloverdaleroofingco.com/",
+        "https://www.paragonroofingbc.ca/surrey/cloverdale-roofing",
+        "https://nanoshieldbc.ca/roof-inspection",
+        "https://www.paragonroofingbc.ca/guides/roof-inspection-surrey-bc-guide"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/740db7cc-0b87-4b63-a858-d45aa948dd40"
+    },
+    {
+      "query": "roofing South Surrey BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "roofingsurreybc.com",
+        "www.604roofsolutions.ca",
+        "biggunsroofing.com",
+        "Bing"
+      ]
+    },
+    {
+      "query": "roofing South Surrey BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceUrls": [
+        "https://www.penfoldsroofing.com/locations/south-surrey-roofing",
+        "https://www.hazelmereroofing.ca/",
+        "https://southwestroof.ca/",
+        "https://www.paragonroofingbc.ca/south-surrey-roofing-services",
+        "https://tnscontracting.ca/locations/south-surrey",
+        "https://www.paragonroofingbc.ca/guides/residential-roof-repair-surrey-bc-guide"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/9ad0f7b6-7e64-4c30-9552-97a7c184fef5"
+    },
+    {
+      "query": "what should a roofing quote include BC",
+      "engine": "Copilot Search",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceLabels": [
+        "marksroofingltd.com",
+        "maxroofingbc.ca"
+      ]
+    },
+    {
+      "query": "what should a roofing quote include BC",
+      "engine": "Perplexity",
+      "answerPresent": true,
+      "domainCited": false,
+      "sourceUrls": [
+        "https://shorelineroofing.ca/how-to-read-a-roofing-quote-victoria/",
+        "https://protorchroofing.ca/blog/commercial-roofing-quote-vancouver-your-2026-guide-to-accurate-estimates"
+      ],
+      "answerUrl": "https://www.perplexity.ai/search/60c9573b-a447-4a18-a281-f6aa6cf1f595"
+    }
+  ]
+}
