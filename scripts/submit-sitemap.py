@@ -9,6 +9,8 @@ from google.auth.transport.requests import Request
 
 origin = 'https://cloverdaleroofingco.com'
 credentials = Credentials.from_authorized_user_file(str(Path.home() / 'google-tools' / 'token.json'))
+if not credentials.has_scopes(['https://www.googleapis.com/auth/webmasters']):
+    raise SystemExit('The current Google authorization is read-only. Submit the sitemap in Search Console; this script does not expand account permissions.')
 credentials.refresh(Request())
 session = requests.Session()
 session.headers['Authorization'] = f'Bearer {credentials.token}'

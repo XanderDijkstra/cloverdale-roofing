@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-09-07T06:45:43.276065+00:00",
+  "note": "Google indexed-version inspection, not a live fetch or indexing request.",
+  "results": [
+    {
+      "url": "https://cloverdaleroofingco.com/",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-23T21:29:39Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://cloverdaleroofingco.com/",
+        "userCanonical": "https://cloverdaleroofingco.com/",
+        "referringUrls": [
+          "http://cloverdaleroofingco.com/"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResultsResult": null
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/services/roof-repair",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-21T21:18:31Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://cloverdaleroofingco.com/services/roof-repair",
+        "userCanonical": "https://cloverdaleroofingco.com/services/roof-repair",
+        "referringUrls": [
+          "https://www.cloverdaleroofingco.com/services/roof-repair"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResultsResult": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/services/roof-replacement",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-21T15:35:24Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://cloverdaleroofingco.com/services/roof-replacement",
+        "userCanonical": "https://cloverdaleroofingco.com/services/roof-replacement",
+        "referringUrls": [
+          "http://cloverdaleroofingco.com/"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResultsResult": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/services/cedar-roof-conversion",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-21T15:18:59Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://cloverdaleroofingco.com/services/cedar-roof-conversion",
+        "userCanonical": "https://cloverdaleroofingco.com/services/cedar-roof-conversion",
+        "referringUrls": [
+          "https://www.cloverdaleroofingco.com/services/cedar-roof-conversion"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResultsResult": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/locations/clayton-heights",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
+      },
+      "richResultsResult": null
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/locations/south-surrey",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
+      },
+      "richResultsResult": null
+    },
+    {
+      "url": "https://cloverdaleroofingco.com/roofing-guide",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+      },
+      "richResultsResult": null
+    }
+  ]
+}

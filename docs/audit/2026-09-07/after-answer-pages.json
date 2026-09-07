@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-09-07T06:43:10.742Z",
+  "results": [
+    {
+      "query": "roof repair Cloverdale BC",
+      "path": "/services/roof-repair",
+      "answerId": "quick-answer",
+      "intent": "Assess a local leak and repair scope",
+      "evidence": "Assessment limits, repair process, scope, RCABC citation",
+      "status": 200,
+      "sources": [
+        "https://www.rcabc.org/faq/"
+      ]
+    },
+    {
+      "query": "roof replacement Cloverdale BC",
+      "path": "/services/roof-replacement",
+      "answerId": "quick-answer",
+      "intent": "Plan a residential replacement",
+      "evidence": "Written replacement scope, process, concealed damage, RCABC citation",
+      "status": 200,
+      "sources": [
+        "https://www.rcabc.org/faq/"
+      ]
+    },
+    {
+      "query": "cedar roof conversion Cloverdale BC",
+      "path": "/services/cedar-roof-conversion",
+      "answerId": "quick-answer",
+      "intent": "Understand conversion scope",
+      "evidence": "Conversion definition, deck and system planning, manufacturer document reference",
+      "status": 200,
+      "sources": [
+        "https://www.iko.com/na/document-library/"
+      ]
+    },
+    {
+      "query": "roof inspection Clayton Heights BC",
+      "path": "/locations/clayton-heights",
+      "answerId": "roof-inspection",
+      "intent": "Arrange a local assessment",
+      "evidence": "Dedicated inspection section, access planning, link to full inspection scope",
+      "status": 200,
+      "sources": [
+        "https://www.rcabc.org/faq/"
+      ]
+    },
+    {
+      "query": "roofing South Surrey BC",
+      "path": "/locations/south-surrey",
+      "answerId": "roofing-guide",
+      "intent": "Find roofing help in the named area",
+      "evidence": "Residential service options, local planning, pricing factors and coverage",
+      "status": 200,
+      "sources": [
+        "https://www.rcabc.org/faq/"
+      ]
+    },
+    {
+      "query": "what should a roofing quote include BC",
+      "path": "/roofing-guide",
+      "answerId": "quick-answer",
+      "intent": "Compare written roofing proposals",
+      "evidence": "Direct answer, eight-item checklist, RCABC and WorkSafeBC references",
+      "status": 200,
+      "sources": [
+        "https://www.rcabc.org/faq/",
+        "https://www.worksafebc.com/en/insurance/why-clearance-letter",
+        "https://www.iko.com/na/document-library/"
+      ]
+    }
+  ]
+}

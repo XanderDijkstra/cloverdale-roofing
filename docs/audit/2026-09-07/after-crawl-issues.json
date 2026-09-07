@@ -1,0 +1,26 @@
+{
+  "summary": [
+    {
+      "issueType": "title-too-long",
+      "title": "Title too long",
+      "severity": "info",
+      "count": 1
+    }
+  ],
+  "issues": [
+    {
+      "severity": "info",
+      "issueType": "title-too-long",
+      "title": "Title too long",
+      "url": "https://cloverdaleroofingco.com/services/cedar-roof-conversion",
+      "details": {
+        "length": 64
+      },
+      "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+    }
+  ],
+  "meta": {
+    "projectId": "78cad7ac-1b13-4835-9ed5-babc7e590f70",
+    "url": "https://app.openseo.so/p/78cad7ac-1b13-4835-9ed5-babc7e590f70/audit?auditId=1183b698-5917-4132-8b88-2b4672cfa1fb"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "attemptedAt": "2026-09-07T06:43:30Z",
+  "sitemap": "https://cloverdaleroofingco.com/sitemap.xml",
+  "httpStatus": 403,
+  "submitted": false,
+  "reason": "Existing Google token has webmasters.readonly scope. Browser Search Console asks for account re-verification.",
+  "liveDiscovery": "All 15 canonical pages remain in sitemap.xml, which is linked from robots.txt. Ten changed content pages now have accurate 2026-09-07 lastmod values.",
+  "nextStep": "After signing in, submit the full sitemap URL in the domain property's Sitemaps screen. Check status; submission does not guarantee indexing."
+}

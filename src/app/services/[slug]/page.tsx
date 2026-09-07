@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return createPageMetadata({
     title: `${service.title} in Cloverdale, BC`,
+    absoluteTitle: service.slug === "cedar-roof-conversion",
     description: serviceContent[service.slug].description,
     path: `/services/${service.slug}`,
   });
