@@ -56,6 +56,7 @@ export function serviceSchema(service: { title: string; short: string; slug: str
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${absoluteUrl(`/services/${service.slug}`)}#service`,
     name: service.title,
     description: service.short,
     url: absoluteUrl(`/services/${service.slug}`),

@@ -23,7 +23,7 @@ import { services } from "@/lib/site";
 import { GuideTeaser } from "@/components/page-sections";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Roof Repair & Replacement in Cloverdale, BC | Cloverdale Roofing Co.",
+  title: "Cloverdale Roofing Co. | Roof Repair & Replacement, BC",
   description: "Roof repair, replacement, cedar conversion, and roof inspections for homeowners in Cloverdale and Surrey, BC.",
   path: "/",
   absoluteTitle: true,

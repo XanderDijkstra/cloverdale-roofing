@@ -71,6 +71,6 @@ These are functional and rendered-page checks, not a Lighthouse score, field Cor
 2. Supply genuine reviews/profile URLs, credentials, warranty terms, and actual project/team photos before adding those trust elements or richer local-business schema.
 3. Confirm an active receiving CRM/client configuration and notification recipients before replacing email drafts with server submissions. Validate storage and notifications separately with an explicitly authorized test.
 4. Confirm paid-ad destinations before changing campaign-linked headlines or offers.
-5. Connect the appropriate Search Console and consent-aware measurement setup; then verify indexing, conversion delivery, and field performance with actual data.
+5. Search Console ownership and URL inspection were verified on 7 September 2026. Four sampled older URLs are indexed; the sampled Clayton Heights, South Surrey, and homeowner-guide URLs are unknown to Google. See `docs/audit/2026-09-07/`. Verify discovery after the sitemap refresh; conversion delivery and field-performance measurement remain separate activation work.
 
 The page and navigation implementation is reviewable without these facts. Operational lead delivery and verified trust cannot be completed by substituting invented business details.

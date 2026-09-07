@@ -12,6 +12,7 @@ import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/seo";
 import { locationContent } from "../location-content";
 import local from "../location.module.css";
+import { roofingSources } from "@/lib/roofing-answers";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -25,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const location = locations.find((item) => item.slug === slug);
   if (!location) return {};
   return createPageMetadata({
-    title: `Roofing in ${location.title}`,
-    description: `${location.intro} Explore roofing services for ${location.title}.`,
+    title: `Roofing in ${location.title}, BC`,
+    description: location.slug === "langley-border" ? "Roofing near the Cloverdale–Langley border, BC. Share your address to confirm coverage for roof repair, replacement, cedar conversion, or an inspection." : `${location.intro} ${location.title}, BC.`,
     path: `/locations/${location.slug}`,
   });
 }
@@ -50,15 +51,15 @@ export default async function LocationDetailPage({ params }: Props) {
         url: absoluteUrl(`/locations/${location.slug}`),
         provider: { "@id": `${site.url}/#organization` },
         areaServed: { "@type": "Place", name: location.title === "Nearby Langley" ? "Cloverdale–Langley border area, BC" : `${location.title}, BC` },
-        hasOfferCatalog: { "@type": "OfferCatalog", name: "Roofing services", itemListElement: services.map((service) => ({ "@type": "OfferCatalog", name: service.title, url: absoluteUrl(`/services/${service.slug}`) })) },
+        hasOfferCatalog: { "@type": "OfferCatalog", name: "Roofing services", itemListElement: services.map((service) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: service.title, url: absoluteUrl(`/services/${service.slug}`) } })) },
       }]} />
       <SiteHero
         inner
-        eyebrow={`Roofing in ${location.title}`}
+        eyebrow={`Roofing in ${location.title}, British Columbia`}
         title={slug === "langley-border" ? "Roof repair and replacement near the Langley border." : `Roof repair and replacement in ${location.title}.`}
         text={location.intro}
         image="/images/homepage2/cloverdale-roof-hero.webp"
-        imageAlt={`Rain-wet home representing roofing service in ${location.title}`}
+        imageAlt={`Illustration of a rain-wet home representing roofing in ${location.title}`}
         formTitle={`Request a roof assessment in ${location.title}`}
         formText="Tell us what you have noticed and we will help you plan the next step."
         location={location.title}
@@ -90,7 +91,7 @@ export default async function LocationDetailPage({ params }: Props) {
           </div>
           <div className={local.section}>
             <div className={local.heading}><p>Repairs, replacements & assessments</p><h2>Roofing services in {location.title}.</h2></div>
-            <div className={local.services}>{services.map((service, index) => <article key={service.slug}><h3>{service.title}</h3><p>{content.services[index]}</p><Link className={styles.textLink} href={`/services/${service.slug}`}>About {service.title.toLowerCase()}<ArrowRight size={18} aria-hidden="true" /></Link></article>)}</div>
+            <div className={local.services}>{services.map((service, index) => <article id={service.slug} key={service.slug}><h3>{service.title} in {location.title}</h3><p>{content.services[index]}</p><Link className={styles.textLink} href={`/services/${service.slug}`}>About {service.title.toLowerCase()}<ArrowRight size={18} aria-hidden="true" /></Link></article>)}</div>
           </div>
           <div className={`${local.section} ${local.quote}`}>
             <div><p className={local.label}>Your assessment</p><h2>Know what happens next.</h2><p>{content.preparation}</p><Link className={styles.primaryButton} href="#assessment-form">Start your request<ArrowRight aria-hidden="true" /></Link></div>
@@ -100,7 +101,7 @@ export default async function LocationDetailPage({ params }: Props) {
               <li><h3>Review the proposed work</h3><p>Discuss the findings and the repair or replacement options before agreeing to any roofing work.</p></li>
             </ol>
           </div>
-          <div className={`${local.section} ${local.pricing}`}><h2>What affects a roofing quote?</h2><p>{content.pricing}</p></div>
+          <div className={`${local.section} ${local.pricing}`}><h2>What affects a roofing quote?</h2><div><p>{content.pricing}</p><p>Before accepting a proposal, ask for written specifications, payment terms, and warranty details. See <a href={roofingSources.rcabc.url}>RCABC’s questions to ask a roofing contractor</a> and our <Link href="/roofing-guide#compare-quotes">roofing quote checklist</Link>.</p></div></div>
           <div className={`${local.section} ${styles.faqLayout}`}>
             <div className={local.heading}><p>Questions from homeowners</p><h2>Roofing in {location.title}: your questions.</h2></div>
             <div className={styles.faqList}>{content.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div>

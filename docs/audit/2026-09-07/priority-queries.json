@@ -1,0 +1,8 @@
+[
+  {"query":"roof repair Cloverdale BC","path":"/services/roof-repair","answerId":"quick-answer","intent":"Assess a local leak and repair scope","evidence":"Assessment limits, repair process, scope, RCABC citation"},
+  {"query":"roof replacement Cloverdale BC","path":"/services/roof-replacement","answerId":"quick-answer","intent":"Plan a residential replacement","evidence":"Written replacement scope, process, concealed damage, RCABC citation"},
+  {"query":"cedar roof conversion Cloverdale BC","path":"/services/cedar-roof-conversion","answerId":"quick-answer","intent":"Understand conversion scope","evidence":"Conversion definition, deck and system planning, manufacturer document reference"},
+  {"query":"roof inspection Clayton Heights BC","path":"/locations/clayton-heights","answerId":"roof-inspection","intent":"Arrange a local assessment","evidence":"Dedicated inspection section, access planning, link to full inspection scope"},
+  {"query":"roofing South Surrey BC","path":"/locations/south-surrey","answerId":"roofing-guide","intent":"Find roofing help in the named area","evidence":"Residential service options, local planning, pricing factors and coverage"},
+  {"query":"what should a roofing quote include BC","path":"/roofing-guide","answerId":"quick-answer","intent":"Compare written roofing proposals","evidence":"Direct answer, eight-item checklist, RCABC and WorkSafeBC references"}
+]

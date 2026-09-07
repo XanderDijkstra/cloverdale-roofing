@@ -1,0 +1,62 @@
+{
+  "backlinks": {
+    "target": "cloverdaleroofingco.com",
+    "scope": "domain",
+    "scopeNote": "Summary excludes subdomains; trend data includes subdomains (provider limitation).",
+    "overview": {
+      "overview": {
+        "target": "cloverdaleroofingco.com",
+        "displayTarget": "cloverdaleroofingco.com",
+        "scope": "domain",
+        "summary": {
+          "rank": 0,
+          "backlinks": 3,
+          "referringPages": 3,
+          "referringDomains": 3,
+          "brokenBacklinks": 0,
+          "brokenPages": 0,
+          "backlinksSpamScore": 53,
+          "targetSpamScore": 0,
+          "newBacklinks": null,
+          "lostBacklinks": null,
+          "newReferringDomains": null,
+          "lostReferringDomains": null
+        },
+        "trends": [],
+        "newLostTrends": [],
+        "fetchedAt": "2026-09-07T06:27:49.364Z"
+      }
+    },
+    "referringDomains": {
+      "rows": [],
+      "totalCount": 0,
+      "hasMore": false,
+      "page": 1,
+      "pageSize": 100,
+      "fetchedAt": "2026-09-07T06:27:49.726Z"
+    },
+    "meta": {
+      "projectId": "78cad7ac-1b13-4835-9ed5-babc7e590f70",
+      "url": "https://app.openseo.so/p/78cad7ac-1b13-4835-9ed5-babc7e590f70/backlinks?target=cloverdaleroofingco.com&scope=domain"
+    }
+  },
+  "domain": {
+    "domain": "cloverdaleroofingco.com",
+    "organicTraffic": 1,
+    "organicKeywords": 1,
+    "backlinks": null,
+    "referringDomains": null,
+    "hasData": true,
+    "fetchedAt": "2026-09-07T06:27:51.752Z",
+    "scope": "subdomains",
+    "displayTarget": "cloverdaleroofingco.com",
+    "meta": {
+      "projectId": "78cad7ac-1b13-4835-9ed5-babc7e590f70",
+      "url": "https://app.openseo.so/p/78cad7ac-1b13-4835-9ed5-babc7e590f70/domain?domain=cloverdaleroofingco.com"
+    }
+  },
+  "keywordResearch": {
+    "status": "rejected irrelevant fallback",
+    "relevantRows": []
+  }
+}

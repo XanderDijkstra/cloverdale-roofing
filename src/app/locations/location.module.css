@@ -18,6 +18,7 @@
 .quote li { padding-left: 12px; margin-bottom: 30px; }
 .quote li:last-child { margin-bottom: 0; }
 .pricing { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; padding-block: 40px; border-block: 1px solid var(--line); }
+.pricing a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 767px) {
   .planning, .services, .quote, .pricing { grid-template-columns: 1fr; }
   .planning article, .planning article:first-child, .planning article:last-child { padding: 28px 0; border: 0; border-bottom: 1px solid var(--line); }

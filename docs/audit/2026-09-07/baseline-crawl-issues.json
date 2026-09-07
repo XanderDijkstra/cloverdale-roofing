@@ -1,0 +1,52 @@
+{
+  "summary": [
+    {
+      "issueType": "title-too-long",
+      "title": "Title too long",
+      "severity": "info",
+      "count": 2
+    },
+    {
+      "issueType": "meta-description-too-long",
+      "title": "Meta description too long",
+      "severity": "info",
+      "count": 1
+    }
+  ],
+  "issues": [
+    {
+      "severity": "info",
+      "issueType": "meta-description-too-long",
+      "title": "Meta description too long",
+      "url": "https://cloverdaleroofingco.com/locations/langley-border",
+      "details": {
+        "length": 171
+      },
+      "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+    },
+    {
+      "severity": "info",
+      "issueType": "title-too-long",
+      "title": "Title too long",
+      "url": "https://cloverdaleroofingco.com/",
+      "details": {
+        "length": 68
+      },
+      "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+    },
+    {
+      "severity": "info",
+      "issueType": "title-too-long",
+      "title": "Title too long",
+      "url": "https://cloverdaleroofingco.com/roofing-guide",
+      "details": {
+        "length": 79
+      },
+      "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+    }
+  ],
+  "meta": {
+    "projectId": "78cad7ac-1b13-4835-9ed5-babc7e590f70",
+    "url": "https://app.openseo.so/p/78cad7ac-1b13-4835-9ed5-babc7e590f70/audit?auditId=5c3cec2b-a291-47b3-8c77-be92328cf89d"
+  }
+}

@@ -10,6 +10,7 @@ import { services } from "@/lib/site";
 import { serviceContent } from "@/lib/service-content";
 import { FaqSection, ServiceAreas, GuideTeaser, FinalCta } from "@/components/page-sections";
 import section from "@/components/page-sections.module.css";
+import RoofingAnswer from "@/components/roofing-answer";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
   return createPageMetadata({
-    title: `${service.title} in Cloverdale`,
+    title: `${service.title} in Cloverdale, BC`,
     description: serviceContent[service.slug].description,
     path: `/services/${service.slug}`,
   });
@@ -47,7 +48,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       ]} />
       <SiteHero
         inner
-        eyebrow={`${service.title} in Cloverdale`}
+        eyebrow={`${service.title} in Cloverdale, British Columbia`}
         title={`${service.title} for Cloverdale homes.`}
         text={service.short}
         image={service.image}
@@ -64,6 +65,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
             <Link href="/">Home</Link><span>/</span><Link href="/services">Services</Link><span>/</span><span>{service.title}</span>
           </nav>
+          <RoofingAnswer slug={service.slug} />
           <div className={styles.detailGrid}>
             <div className={styles.detailCopy}>
               <h2>{content.heading}</h2>

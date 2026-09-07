@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowRight, ChevronDown, House, MapPin, Menu, Wrench, X } from "lucide-react";
 import { services } from "@/lib/site";
@@ -18,10 +18,21 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const header = useRef<HTMLElement>(null);
   const toggle = useRef<HTMLButtonElement>(null);
+  const hoverClose = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  function closeGroups() {
-    header.current?.querySelectorAll("details[open]").forEach((item) => item.removeAttribute("open"));
+  const cancelHoverClose = useCallback(() => {
+    if (hoverClose.current) clearTimeout(hoverClose.current);
+    hoverClose.current = null;
+  }, []);
+
+  function supportsHover() {
+    return window.matchMedia("(min-width: 1051px) and (hover: hover) and (pointer: fine)").matches;
   }
+
+  const closeGroups = useCallback(() => {
+    cancelHoverClose();
+    header.current?.querySelectorAll("details[open]").forEach((item) => item.removeAttribute("open"));
+  }, [cancelHoverClose]);
 
   useEffect(() => {
     function outside(event: PointerEvent) {
@@ -30,9 +41,22 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         setMobileOpen(false);
       }
     }
+    function escape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      const open = header.current?.querySelector<HTMLDetailsElement>("details[open]");
+      if (open) {
+        const focusWasInHeader = header.current?.contains(document.activeElement);
+        closeGroups();
+        if (focusWasInHeader) open.querySelector("summary")?.focus();
+      } else if (mobileOpen) {
+        setMobileOpen(false);
+        toggle.current?.focus();
+      }
+    }
     document.addEventListener("pointerdown", outside);
-    return () => document.removeEventListener("pointerdown", outside);
-  }, []);
+    document.addEventListener("keydown", escape);
+    return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", escape); cancelHoverClose(); };
+  }, [cancelHoverClose, closeGroups, mobileOpen]);
 
   const groups = [
     { title: "Services", href: "/services", intro: "Find the right next step for your roof.", note: "From a single leak to a complete replacement, start with the condition of your roof.", items: services.map((s) => ({ title: s.title, text: s.short, href: `/services/${s.slug}` })) },
@@ -40,12 +64,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
   ];
 
   return (
-    <header className={styles.header} ref={header} onKeyDown={(event) => {
-      if (event.key !== "Escape") return;
-      const open = header.current?.querySelector<HTMLDetailsElement>("details[open]");
-      if (open) { open.open = false; open.querySelector("summary")?.focus(); }
-      else { setMobileOpen(false); toggle.current?.focus(); }
-    }}>
+    <header className={styles.header} ref={header}>
       <div className={styles.headerInner}>
         <Link className={styles.brand} href="/" aria-label="Cloverdale Roofing Co. homepage">
           <span className={styles.brandMark} aria-hidden="true"><House strokeWidth={2} /></span>
@@ -60,11 +79,23 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
           if ((event.target as HTMLElement).closest("a")) { closeGroups(); setMobileOpen(false); }
         }}>
           {groups.map((group) => (
-            <details className={nav.group} key={group.href} onToggle={(event) => {
+            <details className={nav.group} key={group.href} onPointerEnter={(event) => {
+              if (event.pointerType !== "mouse" || !supportsHover()) return;
+              cancelHoverClose();
+              event.currentTarget.open = true;
+            }} onPointerLeave={(event) => {
+              if (event.pointerType !== "mouse" || !supportsHover()) return;
+              const details = event.currentTarget;
+              cancelHoverClose();
+              // Allow the pointer to cross the space between the trigger and panel.
+              hoverClose.current = setTimeout(() => {
+                if (!details.contains(document.activeElement)) details.open = false;
+              }, 220);
+            }} onToggle={(event) => {
               if (event.currentTarget.open) header.current?.querySelectorAll("details").forEach((item) => { if (item !== event.currentTarget) item.open = false; });
             }}>
               <summary className={pathname.startsWith(group.href) ? nav.active : undefined}>{group.title}<ChevronDown size={15} aria-hidden="true" /></summary>
-              <div className={nav.panel}>
+              <div className={nav.panel} onPointerEnter={cancelHoverClose}>
                 <div className={nav.panelIntro}>
                   <p>{group.title === "Services" ? "How we can help" : "Our service areas"}</p>
                   <h2>{group.intro}</h2><p>{group.note}</p>

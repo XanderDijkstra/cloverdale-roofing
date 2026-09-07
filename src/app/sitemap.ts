@@ -16,5 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
   ];
 
-  return routes.map((path) => ({ url: absoluteUrl(path) }));
+  // Editorial dates, not the build date: only change when page content changes.
+  const updated = new Set(["/", "/roofing-guide", ...services.map((service) => `/services/${service.slug}`), ...locations.map((location) => `/locations/${location.slug}`)]);
+  return routes.map((path) => ({ url: absoluteUrl(path), ...(updated.has(path) ? { lastModified: "2026-09-07" } : {}) }));
 }
