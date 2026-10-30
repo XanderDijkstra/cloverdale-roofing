@@ -15,8 +15,7 @@
   "routes": [
     { "pattern": "cloverdaleroofingco.com", "custom_domain": true }
   ],
-  // keep until the live domain is verified, then set false
-  "workers_dev": true,
+  "workers_dev": false,
   "preview_urls": false,
   "observability": { "enabled": true }
 }
