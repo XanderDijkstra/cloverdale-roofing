@@ -1,0 +1,19 @@
+{
+  // Cloverdale Roofing Co. (cloverdaleroofingco.com) — static Next.js export (./out) served as Cloudflare Workers
+  // static assets. No Worker script (the quote form opens a mailto: draft, no API).
+  // Build: `npm run build`. Deploy: `npm run deploy`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloverdale-roofing",
+  "compatibility_date": "2026-10-01",
+  "upload_source_maps": true,
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  // Until the domain is attached the site lives on the workers.dev subdomain.
+  // When the domain is live: add routes [{ "pattern": "cloverdaleroofingco.com", "custom_domain": true }] and set workers_dev to false.
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true }
+}

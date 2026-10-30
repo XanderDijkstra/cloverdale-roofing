@@ -1,0 +1,6 @@
+# Permanent redirects (was next.config redirects(); 308 like Next's permanent: true).
+/2 / 308
+/2/* /:splat 308
+/service-areas /locations 308
+# Trailing slash -> no trailing slash as a permanent 308, matching Next.js/Vercel.
+/*/ /:splat 308

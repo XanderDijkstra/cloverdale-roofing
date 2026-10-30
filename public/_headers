@@ -1,0 +1,12 @@
+# Security headers for every path (was next.config headers()).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Metadata images are exported without a file extension; give them the right type.
+/icon
+  Content-Type: image/png
+
+/opengraph-image
+  Content-Type: image/png

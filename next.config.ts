@@ -1,21 +1,10 @@
 import type { NextConfig } from "next";
 
+// Fully static site, served as Cloudflare Workers static assets (see wrangler.jsonc).
+// Static export ignores headers()/redirects(): they live in public/_headers and public/_redirects.
 const nextConfig: NextConfig = {
-  poweredByHeader: false,
-  async headers() {
-    return [{ source: "/:path*", headers: [
-      { key: "X-Content-Type-Options", value: "nosniff" },
-      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-      { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-    ] }];
-  },
-  async redirects() {
-    return [
-      { source: "/2", destination: "/", permanent: true },
-      { source: "/2/:path*", destination: "/:path*", permanent: true },
-      { source: "/service-areas", destination: "/locations", permanent: true },
-    ];
-  },
+  output: "export",
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

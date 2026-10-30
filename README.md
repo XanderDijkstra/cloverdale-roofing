@@ -1,6 +1,9 @@
 # Cloverdale Roofing Co.
 
-Next.js 16 / React 19 / TypeScript contractor website, deployed to Vercel from `main`.
+Next.js 16 / React 19 / TypeScript contractor website.
+
+**Hosting: Cloudflare Workers** — static export (`output: "export"` → `./out`) served as Workers static assets, worker `cloverdale-roofing` (see `wrangler.jsonc`). Deploy with `npm run deploy` (build + `wrangler deploy`); a push to `main` does not deploy by itself. Headers and redirects live in `public/_headers` and `public/_redirects`. `vercel.json` only keeps the old Vercel deployment equivalent until DNS moves to Cloudflare; delete it after the cutover.
+
 Production: https://cloverdaleroofingco.com
 
 The site has 15 public pages: homepage, service and location directories, four services,
