@@ -12,7 +12,10 @@
     "html_handling": "auto-trailing-slash"
   },
   // Until the domain is attached the site lives on the workers.dev subdomain.
-  // When the domain is live: add routes [{ "pattern": "cloverdaleroofingco.com", "custom_domain": true }] and set workers_dev to false.
+  "routes": [
+    { "pattern": "cloverdaleroofingco.com", "custom_domain": true }
+  ],
+  // keep until the live domain is verified, then set false
   "workers_dev": true,
   "preview_urls": false,
   "observability": { "enabled": true }
